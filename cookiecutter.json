@@ -1,6 +1,6 @@
 {
     "plugin_name": "nft-cookiecutter",
-    "plugin_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "plugin_slug": "{{ cookiecutter.plugin_name.lower().replace(' ', '_') }}",
     "description": "",
     "github_username": "nvnieuwk",
     "github_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.plugin_name }}",
