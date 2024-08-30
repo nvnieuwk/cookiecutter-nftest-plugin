@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.{{ cookiecutter.github_username }}</groupId>
+	<artifactId>{{ cookiecutter.plugin_name }}</artifactId>
+	<version>{{ cookiecutter.version }}</version>
+	<packaging>jar</packaging>
+
+	<name>{{ cookiecutter.plugin_name }}</name>
+	<description>{{ cookiecutter.description }}</description>
+	<url>{{ cookiecutter.github_url }}</url>
+
+	<licenses>
+		<license>
+			<name>{{ cookiecutter.license }} License</name>
+			<url>{{ if cookiecutter.license == "MIT" }}http://www.opensource.org/licenses/mit{{ else if cookiecutter.license == "BSD-3-Clause" }}https://opensource.org/license/bsd-3-clause{{ else if cookiecutter.license == "Apache-2.0" }}https://www.apache.org/licenses/LICENSE-2.0{{ else }}<!-- TODO add the link to the license here -->{{endif}}</url>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>{{ cookiecutter.github_url }}/tree/{{ cookiecutter.github_default_branc }}</url>
+		<connection>scm:git:{{ cookiecutter.github_url }}</connection>
+		<developerConnection>scm:git:{{ cookiecutter.github_url|replace('https', 'ssh')|replace('github.com/','github.com:') }}.git</developerConnection>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>11</java.version>
+		<maven.compiler.release>${java.version}</maven.compiler.release>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<additionalparam>-Xdoclint:none</additionalparam>
+	</properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.5.2</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

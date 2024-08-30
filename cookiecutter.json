@@ -1,0 +1,15 @@
+{
+    "plugin_name": "nft-cookiecutter",
+    "plugin_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "description": "",
+    "github_username": "nvnieuwk",
+    "github_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.plugin_name }}",
+    "github_default_branch": "main",
+    "version": "0.1.0",
+    "license": ["MIT", "BSD-3-Clause", "Apache-2.0", "proprietary"],
+    "mkdocs": true,
+    "docsite_url": "https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.plugin_name }}",
+    "author_name": "{{ cookiecutter.github_username }}",
+    "year": "{{ cookiecutter.release_date[:4] }}",
+    "_extensions": ["jinja2_time.TimeExtension", "jinja2_strcase.StrcaseExtension"]
+  }

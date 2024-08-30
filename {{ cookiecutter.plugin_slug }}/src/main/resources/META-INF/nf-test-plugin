@@ -1,0 +1,5 @@
+moduleName={{ cookiecutter.plugin_name }}
+moduleVersion={{ cookiecutter.version }}
+moduleAuthors={{ cookiecutter.author_name }}
+extensionMethods={{ cookiecutter.github_username }}.nf.test.{{ cookiecutter.plugin_name|replace('nft-', '')}}.Methods
+extensionClasses={{ cookiecutter.github_username }}.nf.test.{{ cookiecutter.plugin_name|replace('nft-', '')}}.PathExtension
