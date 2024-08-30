@@ -10,6 +10,7 @@
     "mkdocs": true,
     "docsite_url": "https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.plugin_name }}",
     "author_name": "{{ cookiecutter.github_username }}",
+    "release_date": "{% now 'local' %}",
     "year": "{{ cookiecutter.release_date[:4] }}",
     "_extensions": ["jinja2_time.TimeExtension", "jinja2_strcase.StrcaseExtension"]
   }
