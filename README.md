@@ -63,7 +63,7 @@ This script will run all tests of the plugin that are situated in the `tests` fo
 
 ### `bump-version.sh`
 
-This version will update the plugin version in all relevant places.
+This script will update the plugin version in all relevant places.
 
 ```bash
 bash bump-version.sh <version>
