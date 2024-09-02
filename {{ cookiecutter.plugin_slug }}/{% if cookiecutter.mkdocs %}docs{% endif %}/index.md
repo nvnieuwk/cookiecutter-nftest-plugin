@@ -29,7 +29,7 @@ To use the development version, please do the following steps:
 === "SSH"
 
     ```bash
-    git clone {{ cookiecutter.github_url|replace('https', 'git@')|replace('github.com/','github.com:') }}.git
+    git clone {{ cookiecutter.github_url|replace('https://', 'git@')|replace('github.com/','github.com:') }}.git
     ```
 
 - Run the build script
