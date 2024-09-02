@@ -15,7 +15,7 @@
 	<licenses>
 		<license>
 			<name>{{ cookiecutter.license }} License</name>
-			<url>{{ if cookiecutter.license == "MIT" }}http://www.opensource.org/licenses/mit{{ elif cookiecutter.license == "BSD-3-Clause" }}https://opensource.org/license/bsd-3-clause{{ elif cookiecutter.license == "Apache-2.0" }}https://www.apache.org/licenses/LICENSE-2.0{{ else }}<!-- TODO add the link to the license here -->{{endif}}</url>
+			<url>{% if cookiecutter.license == "MIT" %}http://www.opensource.org/licenses/mit{% elif cookiecutter.license == "BSD-3-Clause" %}https://opensource.org/license/bsd-3-clause{% elif cookiecutter.license == "Apache-2.0" %}https://www.apache.org/licenses/LICENSE-2.0{% else %}<!-- TODO add the link to the license here -->{% endif %}</url>
 		</license>
 	</licenses>
 
