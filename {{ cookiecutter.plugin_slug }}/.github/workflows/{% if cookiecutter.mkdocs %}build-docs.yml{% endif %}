@@ -22,17 +22,17 @@ jobs:
           echo "pipeline_version=$pipeline_version" >> $GITHUB_ENV
       - name: Setup git user
         run: |
-          git config --global user.name "${{ '{' }}{github.actor}{{ '}' }}"
-          git config --global user.email "${{ '{' }}{github.actor}{{ '}' }}@users.noreply.github.com"
+          git config --global user.name "${{ '{{' }}github.actor{{ '}}' }}"
+          git config --global user.email "${{ '{{' }}github.actor{{ '}}' }}@users.noreply.github.com"
       - uses: actions/cache@v3
         with:
-          key: mkdocs-material-${{ '{' }}{ env.cache_id }{{ '}' }}
+          key: mkdocs-material-${{ '{{' }} env.cache_id {{ '}}' }}
           path: .cache
           restore-keys: |
             mkdocs-material-
       - name: Install dependencies
         run: pip install mkdocs-material pymdown-extensions pillow cairosvg mike
       - name: Build docs
-        run: mike deploy --push --update-aliases ${{ env.pipeline_version }} latest
+        run: mike deploy --push --update-aliases ${{ '{{' }} env.pipeline_version {{ '}}' }} latest
       - name: Set default docs
         run: mike set-default --push latest
