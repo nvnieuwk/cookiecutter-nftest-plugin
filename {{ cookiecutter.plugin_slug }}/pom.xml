@@ -20,7 +20,7 @@
 	</licenses>
 
 	<scm>
-		<url>{{ cookiecutter.github_url }}/tree/{{ cookiecutter.github_default_branc }}</url>
+		<url>{{ cookiecutter.github_url }}/tree/{{ cookiecutter.github_default_branch }}</url>
 		<connection>scm:git:{{ cookiecutter.github_url }}</connection>
 		<developerConnection>scm:git:{{ cookiecutter.github_url|replace('https', 'ssh')|replace('github.com/','github.com:') }}.git</developerConnection>
 	</scm>
