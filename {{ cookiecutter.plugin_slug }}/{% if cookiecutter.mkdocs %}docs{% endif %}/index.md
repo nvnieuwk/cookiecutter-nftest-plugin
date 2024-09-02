@@ -23,13 +23,13 @@ To use the development version, please do the following steps:
 === "HTTPS"
 
     ```bash
-    git clone {{ cookiecutter.github_url|replace('https', 'git@')|replace('github.com/','github.com:') }}.git
+    git clone {{ cookiecutter.github_url }}.git
     ```
 
 === "SSH"
 
     ```bash
-    git clone {{ cookiecutter.github_url }}.git
+    git clone {{ cookiecutter.github_url|replace('https', 'git@')|replace('github.com/','github.com:') }}.git
     ```
 
 - Run the build script
@@ -47,5 +47,15 @@ config {
     }
 }
 ```
+
+- Or add the plugin jar to an nf-test command:
+
+```bash title="Terminal"
+nf-test test --plugins full/path/to/the/plugin/jar
+```
+
+!!! note
+
+    The plugin jar will always be located in the `target/` directory in the root of the plugin repository
 
 

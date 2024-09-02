@@ -9,7 +9,7 @@ package {{ cookiecutter.github_username }}.nf.test.{{ cookiecutter.plugin_name|r
 public class PathExtension {
 
 	public static void hello() {
-		System.println("Hello from {{ cookiecutter.plugin_name }}");
+		System.out.println("Hello from {{ cookiecutter.plugin_name }}");
 	}
 
 }
