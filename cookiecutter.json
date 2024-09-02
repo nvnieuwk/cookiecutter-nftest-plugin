@@ -8,9 +8,7 @@
     "version": "0.1.0",
     "license": ["MIT", "BSD-3-Clause", "Apache-2.0", "proprietary"],
     "mkdocs": true,
-    {{ if cookiecutter.mkdocs }}
     "docsite_url": "https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.plugin_name }}",
-    {{ endif }}
     "author_name": "{{ cookiecutter.github_username }}",
     "release_date": "{% now 'local' %}",
     "year": "{{ cookiecutter.release_date[:4] }}",
